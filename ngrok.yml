@@ -7,7 +7,7 @@ tunnels:
   rpihttp:
     proto: http
     addr: 80
-    domain: geec-IO01-<add_rpi_cpu_serial_here>-rpihttp.ngrok.dev
+    domain: geec-IO01-<add_rpi_cpu_serial_here>.ngrok.dev
   rpissl:
     proto: tcp
     addr: 22
