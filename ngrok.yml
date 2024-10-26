@@ -3,7 +3,11 @@ version: 3
 agent:
   authtoken: <add_your_token_here>
 
-endpoints:
-  - name: httpbin
-    upstream:
-      url: 80
+tunnels:
+  rpihttp:
+    proto: http
+    addr: 80
+    domain: geec-IO01-rpihttp.ngrok.dev
+  rpissl:
+    proto: tcp
+    addr: 22
