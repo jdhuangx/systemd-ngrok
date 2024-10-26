@@ -47,6 +47,9 @@ cp ngrok.service /lib/systemd/system/
 mkdir -p /opt/ngrok
 cp ngrok.yml /opt/ngrok
 sed -i "s/<add_your_token_here>/$1/g" /opt/ngrok/ngrok.yml
+serial=$(grep Serial /proc/cpuinfo | awk '{print $3}')
+sed -i "s/<add_rpi_cpu_serial_here>/$serial/g" /opt/ngrok/ngrok.yml
+grep Serial /proc/cpuinfo | awk '{print $3}'
 
 cd /opt/ngrok
 echo "Downloading ngrok for $ARCH . . ."
